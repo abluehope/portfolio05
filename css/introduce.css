@@ -1,0 +1,119 @@
+.about_top {
+  position: relative;
+  background: url(../images/main_visual01.png) no-repeat center center/cover;
+  text-align: center;
+}
+
+.about_top::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 0;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.about_top .container {
+  padding: 100px 0;
+  position: relative;
+  z-index: 999;
+}
+
+.about_top .container span {
+  display: block;
+  margin: 0 0 10px 0;
+  font-size: 15px;
+  font-weight: 300;
+  color: #fff;
+}
+
+.about_top .container strong {
+  display: block;
+  margin: 0 0 20px 0;
+  font-size: 35px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.about_top .container p {
+  color: #fff;
+}
+
+.sub_menu {
+  border-bottom: 1px solid #ddd;
+  height: 45px;
+}
+
+.sub_menu .menu .path_link {
+  display: flex;
+}
+
+.sub_menu .menu .path_link li {
+  position: relative;
+  padding: 0 12px 0 16px;
+  border-right: 1px solid #ddd;
+  line-height: 45px;
+  cursor: pointer;
+}
+
+.sub_menu .menu .path_link li span {
+  display: block;
+  width: 120px;
+}
+
+.sub_menu .menu .path_link li i {
+  float: right;
+  line-height: 45px;
+}
+
+.sub_menu .menu .path_link li:nth-child(1) i {
+  font-size: 20px;
+}
+
+.sub_menu .menu .path_link .sub {
+  position: absolute;
+  display: none;
+  left: -1px;
+  width: 150px;
+  z-index: 999;
+  background: #fff;
+  border-left: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.sub_menu .menu .path_link .sub li:hover {
+  background: #ddd;
+}
+
+.sub_menu .menu .path_link .sub.on {
+  display: block;
+}
+
+.about_introduce .content_wrap {
+  display: flex;
+}
+
+.about_introduce .container {
+  width: calc((100% - 1440px) / 2 + 500px);
+  background: url(../images/about_introduce.jpg) no-repeat center center/cover;
+  margin: 0 0 0 auto;
+  min-height: 500px;
+}
+
+.about_introduce .content_wrap {
+  display: flex;
+}
+
+.about_introduce .desc {
+  width: 730px;
+  transform: translate(28%, 0);
+}
+
+.about_introduce .desc p:nth-child(1) {
+  margin: 0 0 40px 0;
+  font-family: "Noto Serif KR";
+  font-size: 28px;
+}
+
+.about_introduce .desc p {
+  margin: 0 0 25px 0;
+  line-height: 22px;
+}
