@@ -1,3 +1,7 @@
+body {
+  word-break: keep-all;
+}
+
 .slick-track,
 .slick-list {
   /* 슬라이드 깜빡임 해결 */
@@ -106,7 +110,142 @@
 }
 
 .header .gnb > ul > li {
+  position: relative;
   line-height: 80px;
+}
+
+.header .sub {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 160px;
+  border: 1px solid #ddd;
+  background: #fff;
+  text-align: center;
+  line-height: 40px;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.7s;
+
+  z-index: 999;
+}
+
+.header .sub::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%, 0) rotate(45deg);
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+}
+
+.header .sub li {
+  position: relative;
+  background: #fff;
+}
+
+.header .sub li a {
+  font-size: 14px;
+}
+
+.header .gnb > ul > li:hover .sub {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.header .mobile_btn {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .header .mobile_btn {
+    display: block;
+
+    position: fixed;
+    inset: 27px 30px auto auto;
+    z-index: 1000;
+    width: 30px;
+    height: 30px;
+  }
+
+  .mobile_btn::before,
+  .mobile_btn::after {
+    content: "";
+    position: absolute;
+    inset: 14px 5px auto 5px;
+    height: 2px;
+    background: #fff;
+
+    transition: 0.5s;
+  }
+
+  .header.on .mobile_btn::before,
+  .header.on .mobile_btn::after {
+    background: #444;
+  }
+
+  .header.on .mobile_btn.on::before,
+  .header.on .mobile_btn.on::after {
+    background: #fff;
+  }
+
+  .mobile_btn.on::before {
+    transform: rotate(45deg);
+  }
+
+  .mobile_btn.on::after {
+    transform: rotate(-45deg);
+  }
+
+  .mobile_btn button {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+
+  .mobile_btn button::before,
+  .mobile_btn button::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: #fff;
+    opacity: 1;
+
+    transition: 0.5s;
+  }
+
+  .header.on .mobile_btn button::before,
+  .header.on .mobile_btn button::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    background: #444;
+    opacity: 1;
+  }
+
+  .header.on .mobile_btn.on button::before,
+  .header.on .mobile_btn.on button::after {
+    opacity: 0;
+  }
+
+  .mobile_btn.on button::before,
+  .mobile_btn.on button::after {
+    opacity: 0;
+  }
+
+  .mobile_btn button::before {
+    inset: 7px 5px auto 5px;
+  }
+
+  .mobile_btn button::after {
+    inset: auto 5px 7px 5px;
+  }
 }
 
 .main_visual {
