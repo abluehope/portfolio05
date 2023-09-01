@@ -635,7 +635,6 @@ body {
 
 /* SECTION 03 */
 .main_golf_course {
-  display: none;
   background: linear-gradient(transparent 50%, #f9f9f9 50%);
   /* background: #f9f9f9; */
 }
@@ -731,6 +730,12 @@ body {
   background: url(../images/main_course_03.jpg) no-repeat center center/cover;
 }
 
+@media (max-width: 768px) {
+  .main_golf_course {
+    display: none;
+  }
+}
+
 .main_join {
 }
 
@@ -814,7 +819,6 @@ body {
 }
 
 .main_notice {
-  display: none;
 }
 
 .main_notice .notice ul {
@@ -835,6 +839,12 @@ body {
   display: inline-block;
   width: 750px;
   font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .main_notice {
+    display: none;
+  }
 }
 
 /* footer */
