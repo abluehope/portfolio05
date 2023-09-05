@@ -64,6 +64,7 @@ $(function () {
           centerPadding: "0",
           slidesToShow: 1,
           fade: true,
+          speed: 700,
         },
       },
     ],
@@ -95,6 +96,18 @@ $(function () {
     variableWidth: true,
     arrows: false,
     dots: true,
+    responsive: [
+      {
+        breakpoint: 768,
+        settings: {
+          arrows: false,
+          centerMode: true,
+          centerPadding: "0",
+          slidesToShow: 1,
+          speed: 700,
+        },
+      },
+    ],
   });
 
   $(".main_facilities .tab_arrows .left").on("click", function () {

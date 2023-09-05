@@ -641,6 +641,10 @@ body {
   .main_notice .content .quick_menu .qm_title_gr {
     order: 1;
   }
+
+  .main_notice .content .quick_menu .quick_btn strong {
+    margin: 0 0 8px 0;
+  }
 }
 
 /* ******************** SECTION 02 ******************** */
@@ -933,8 +937,88 @@ body {
 }
 
 @media (max-width: 768px) {
-  .main_golf_course {
-    display: none;
+  .main_golf_course .content_wrap {
+    flex-direction: column;
+  }
+
+  .main_golf_course .content_wrap .txt_box {
+    padding: 0;
+  }
+
+  .main_golf_course .content_wrap .txt_box h2 {
+    margin: 0 0 10px 0;
+    text-align: center;
+  }
+
+  .main_golf_course .content_wrap .txt_box p {
+    text-align: center;
+    font-size: 15px;
+    font-weight: 300;
+  }
+
+  .main_golf_course .img_box {
+    gap: 16px;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .main_golf_course .img_box > * {
+    position: relative;
+    flex: 1;
+    transition: none;
+  }
+
+  .main_golf_course .img_box > *::before {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .main_golf_course .img_box > *.on::before {
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .main_golf_course .img_box .txt {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    opacity: 1;
+  }
+
+  .main_golf_course .img_box > * .txt span {
+    margin: 0 0 0 0;
+    padding: 0 8px 0 0;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .main_golf_course .img_box > * .txt strong {
+    margin: 0 0 0 0;
+    display: inline-block;
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .main_golf_course .img_box > * .txt .box_btn {
+    margin: 0 0;
+    font-size: 12px;
+  }
+
+  .main_golf_course .img_box .itm {
+    padding: 32px;
+    width: 100%;
+  }
+
+  .main_golf_course .img_box .itm_hb {
+    background: url(../images/main_course_01.jpg) no-repeat center center/cover;
+  }
+
+  .main_golf_course .img_box .itm_tb {
+    background: url(../images/main_course_02.jpg) no-repeat center center/cover;
+  }
+
+  .main_golf_course .img_box .itm_bd {
+    background: url(../images/main_course_03.jpg) no-repeat center center/cover;
   }
 }
 
@@ -1066,7 +1150,130 @@ body {
   background: #437535;
   transform: translate(-50%, 0);
 }
-/* footer */
+
+@media (max-width: 768px) {
+  .main_facilities .content {
+    max-width: 1200px;
+    padding: 0 15px;
+  }
+
+  .main_facilities .slick-dots {
+    margin: 320px 0 0 0;
+  }
+
+  .main_facilities .slick-dots li {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: transparent;
+    border: 1px solid #437535;
+    margin: 0 8px;
+  }
+
+  .main_facilities .slick-dots li.slick-active {
+    background: #437535;
+  }
+
+  .main_facilities .slick-dots button {
+    display: none;
+  }
+
+  .main_facilities figure {
+    /* max-width: 800px; */
+    padding: 0 0;
+    margin: 0 0;
+    height: 300px;
+    transition: 1s;
+  }
+
+  .main_facilities figure img {
+    object-fit: cover;
+  }
+
+  .main_facilities .itm {
+    display: none;
+    flex-direction: column;
+
+    height: 100%;
+  }
+
+  .main_facilities .itm h3 {
+    font-size: 20px;
+    font-weight: 500;
+    margin: 0 0 16px 0;
+  }
+
+  .main_facilities .itm a {
+    margin: auto 0 0 0;
+    align-self: flex-start;
+  }
+
+  .main_facilities .itm p {
+    line-height: 20px;
+  }
+
+  .main_facilities .tab_arrows {
+    position: absolute;
+    top: 80%;
+    left: 82.5%;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    max-width: 120px;
+    width: 100%;
+
+    justify-content: center;
+  }
+
+  .main_facilities .tab_arrows i {
+    font-size: 32px;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .main_facilities .tab_arrows .left {
+    padding: 0;
+    color: #bbb;
+  }
+
+  .main_facilities .tab_arrows .right {
+    padding: 0;
+    color: #bbb;
+  }
+
+  .main_facilities .itm.on {
+    display: flex;
+  }
+
+  .main_facilities .tab_txt {
+    position: absolute;
+    top: 640px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    margin: 0 0 0 0;
+    background: #fff;
+    border: 1px solid #ddd;
+
+    width: 320px;
+    height: 300px;
+    padding: 40px 40px;
+
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .main_facilities .tab_txt::before {
+    content: "";
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    width: 2px;
+    height: 40px;
+    background: #437535;
+    transform: translate(-50%, 0);
+  }
+}
+
+/* ******************** footer ******************** */
 
 .footer {
   padding: 40px 0;
