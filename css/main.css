@@ -141,6 +141,30 @@ body {
   line-height: 80px;
 }
 
+.header .gnb > ul > li::before {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #437535;
+  opacity: 0;
+}
+
+.header .gnb > ul > li:hover::before {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.header .gnb > ul > li:hover .sub {
+  top: 70px;
+  opacity: 1;
+  visibility: visible;
+}
+
 @media (max-width: 768px) {
   .header .gnb {
     position: fixed;
@@ -174,6 +198,16 @@ body {
     font-size: 18px;
     font-weight: 500;
   }
+
+  .header .gnb > ul > li::before {
+    display: none;
+  }
+
+  .header .gnb > ul > li:hover .sub {
+    top: 70px;
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .header .sub {
@@ -204,28 +238,29 @@ body {
   font-size: 14px;
 }
 
-.header .gnb > ul > li::before {
-  content: "";
-  position: absolute;
-  top: 16px;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: #437535;
-  opacity: 0;
-}
+@media (max-width: 768px) {
+  .header .sub {
+    display: none;
+    position: static;
+    padding: 0;
+    transform: translate(0, 0);
+    width: auto;
+    border: none;
+    text-align: center;
+    line-height: 35px;
 
-.header .gnb > ul > li:hover::before {
-  opacity: 1;
-  transition: 0.5s;
-}
+    opacity: 1;
+    visibility: visible;
+    transition: none;
 
-.header .gnb > ul > li:hover .sub {
-  top: 70px;
-  opacity: 1;
-  visibility: visible;
+    z-index: 999;
+  }
+
+  .header .sub li {
+    position: relative;
+    background: #f9f9f9;
+    border-bottom: 1px solid #ddd;
+  }
 }
 
 .header .mobile_btn {
@@ -619,6 +654,12 @@ body {
   height: 100%;
   padding: 20px;
   background: #f9f9f9;
+}
+
+.main_notice .content .quick_menu .quick_btn:hover {
+  background: #437535;
+  color: #fff;
+  transition: 0.5s;
 }
 
 .main_notice .content .quick_menu .quick_btn strong {
@@ -1435,7 +1476,7 @@ body {
   position: fixed;
   bottom: 100px;
   right: 100px;
-  z-index: 999;
+  z-index: 998;
 
   opacity: 0;
   visibility: hidden;
