@@ -87,18 +87,21 @@ $(function () {
     $(this).addClass("on").siblings().removeClass("on");
   });
 
-  $(".join_tab_link li").on("click", function (event) {
-    event.preventDefault();
-
-    let idx = $(this).index();
-
-    $(this).addClass("on").siblings().removeClass("on");
-
-    $(".join_tab_content .con")
-      .eq(idx)
+  $(".facilities_slide").on("init afterChange", function (e, s, c) {
+    console.log(c);
+    $(".main_facilities .itm")
+      .eq(c)
       .addClass("on")
       .siblings()
       .removeClass("on");
+  });
+
+  $(".facilities_slide").slick({
+    centerMode: true,
+    // centerPadding: "100px",
+    variableWidth: true,
+    arrows: false,
+    dots: true,
   });
 
   $(".family_link span").on("click", function () {

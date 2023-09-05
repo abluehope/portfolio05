@@ -52,11 +52,11 @@ body {
 
 .btn {
   position: relative;
+  display: inline-block;
   margin: auto 0 0 0;
   border: 1px solid #ddd;
   padding: 10px 25px;
   font-size: 12px;
-  align-self: flex-start;
   background: #fff;
 }
 
@@ -479,6 +479,10 @@ body {
   position: relative;
 }
 
+.main_special_offers .btn {
+  align-self: flex-start;
+}
+
 .main_special_offers figure {
   margin: 0 15px;
 }
@@ -598,8 +602,8 @@ body {
 
 /* SECTION 03 */
 .main_golf_course {
-  background: linear-gradient(transparent 50%, #f9f9f9 50%);
-  /* background: #f9f9f9; */
+  /* background: linear-gradient(transparent 50%, #f9f9f9 50%); */
+  background: #f9f9f9;
 }
 
 .main_golf_course .content_wrap {
@@ -677,7 +681,7 @@ body {
 }
 
 .main_golf_course .img_box > * .txt strong {
-  margin: 0 0 32px 0;
+  margin: 0 0 24px 0;
   display: block;
   font-size: 24px;
   font-weight: 500;
@@ -797,6 +801,174 @@ body {
   font-size: 12px;
 }
 
+.main_facilities {
+  position: relative;
+}
+
+.main_facilities .content {
+  max-width: 100%;
+  padding: 0 0;
+}
+
+.main_facilities .slick-dots {
+  margin: 48px 0;
+  text-align: center;
+}
+
+.main_facilities .slick-dots li {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: transparent;
+  border: 1px solid #437535;
+  margin: 0 8px;
+}
+
+.main_facilities .slick-dots li.slick-active {
+  background: #437535;
+}
+
+.main_facilities .slick-dots button {
+  display: none;
+}
+
+.main_facilities figure {
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 50px;
+  transition: 1s;
+}
+
+.main_facilities figure:not(.slick-current) {
+  filter: grayscale(1);
+}
+
+.main_facilities .itm {
+  display: none;
+  flex-direction: column;
+
+  height: 100%;
+}
+
+.main_facilities .itm h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 0 0 16px 0;
+}
+
+.main_facilities .itm a {
+  margin: auto 0 0 0;
+  align-self: flex-start;
+}
+
+.main_facilities .itm p {
+  line-height: 20px;
+}
+
+.main_facilities .tab_arrows {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 1300px;
+  width: 100%;
+  user-select: none;
+  cursor: pointer;
+}
+
+.main_facilities .tab_arrows .left {
+  position: absolute;
+  left: 15px;
+  width: 100px;
+  height: 30px;
+  text-align: right;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.main_facilities .tab_arrows .left::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #333;
+}
+
+.main_facilities .tab_arrows .left::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 0;
+  width: 20px;
+  height: 2px;
+  background: #333;
+  transform: rotate(-45deg);
+  transform-origin: left bottom;
+}
+
+.main_facilities .tab_arrows .right {
+  position: absolute;
+  right: 15px;
+  width: 100px;
+  height: 30px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.main_facilities .tab_arrows .right::before {
+  content: "";
+  position: absolute;
+  top: 60%;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: #333;
+}
+
+.main_facilities .tab_arrows .right::after {
+  content: "";
+  position: absolute;
+  top: 60%;
+  right: 0;
+  width: 20px;
+  height: 2px;
+  background: #333;
+  transform: rotate(45deg);
+  transform-origin: right bottom;
+}
+
+.main_facilities .itm.on {
+  display: flex;
+}
+
+.main_facilities .tab_txt {
+  position: absolute;
+  top: 640px;
+  left: 50%;
+
+  margin: 0 0 0 -500px;
+  background: #fff;
+  border: 1px solid #ddd;
+
+  width: 320px;
+  height: 400px;
+  padding: 40px 40px;
+
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.main_facilities .tab_txt::before {
+  content: "";
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background: #437535;
+  transform: translate(-50%, 0);
+}
 /* footer */
 
 .footer {
