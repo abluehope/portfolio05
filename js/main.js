@@ -54,6 +54,7 @@ $(function () {
     centerPadding: "0",
     arrows: false,
     slidesToShow: 3,
+    speed: 1000,
     responsive: [
       {
         breakpoint: 768,
@@ -62,15 +63,7 @@ $(function () {
           centerMode: true,
           centerPadding: "0",
           slidesToShow: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          arrows: false,
-          centerMode: true,
-          centerPadding: "0",
-          slidesToShow: 1,
+          fade: true,
         },
       },
     ],
@@ -102,6 +95,13 @@ $(function () {
     variableWidth: true,
     arrows: false,
     dots: true,
+  });
+
+  $(".main_facilities .tab_arrows .left").on("click", function () {
+    $(".facilities_slide").slick("slickPrev");
+  });
+  $(".main_facilities .tab_arrows .right").on("click", function () {
+    $(".facilities_slide").slick("slickNext");
   });
 
   $(".family_link span").on("click", function () {
