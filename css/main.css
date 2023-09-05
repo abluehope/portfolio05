@@ -57,16 +57,15 @@ body {
   padding: 10px 25px;
   font-size: 12px;
   align-self: flex-start;
+  background: #fff;
 }
 
 .more {
-  margin: 0 0 16px 0;
-  text-align: right;
   background: #fff;
 }
 
 .more i {
-  padding: 10px;
+  padding: 8px;
   border: 1px solid #ddd;
   color: #ddd;
 }
@@ -339,69 +338,36 @@ body {
   }
 }
 
-.main_visual .main_slide .main_slide_pp {
+.main_visual .main_slide .itm {
   position: relative;
-  height: 75vh;
+  height: calc(100vh - 107px);
+}
+
+.main_visual .main_slide .itm::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 0 0;
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.main_visual .main_slide .main_slide_pp {
   background: url(../images/main_visual01.png) no-repeat center center/cover;
 }
 
-.main_visual .main_slide .main_slide_pp::after {
-  content: "";
-  position: absolute;
-  inset: 0 0 0 0;
-  background: rgba(0, 0, 0, 0.2);
-}
-
 .main_visual .main_slide .main_slide_lg {
-  position: relative;
-  height: 75vh;
   background: url(../images/main_visual02.png) no-repeat center center/cover;
 }
 
-.main_visual .main_slide .main_slide_lg::after {
-  content: "";
-  position: absolute;
-  inset: 0 0 0 0;
-  background: rgba(0, 0, 0, 0.2);
-}
-
 .main_visual .main_slide .main_slide_golf_winter {
-  position: relative;
-  height: 75vh;
   background: url(../images/main_visual03.png) no-repeat center center/cover;
 }
 
-.main_visual .main_slide .main_slide_golf_winter::after {
-  content: "";
-  position: absolute;
-  inset: 0 0 0 0;
-  background: rgba(0, 0, 0, 0.2);
-}
-
 .main_visual .main_slide .main_slide_golf {
-  position: relative;
-  height: 75vh;
   background: url(../images/main_visual04.png) no-repeat center center/cover;
 }
 
-.main_visual .main_slide .main_slide_golf::after {
-  content: "";
-  position: absolute;
-  inset: 0 0 0 0;
-  background: rgba(0, 0, 0, 0.2);
-}
-
 .main_visual .main_slide .main_slide_sunflower {
-  position: relative;
-  height: 75vh;
   background: url(../images/main_visual05.png) no-repeat center center/cover;
-}
-
-.main_visual .main_slide .main_slide_sunflower::after {
-  content: "";
-  position: absolute;
-  inset: 0 0 0 0;
-  background: rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {
@@ -515,31 +481,32 @@ body {
 
 .main_special_offers figure {
   margin: 0 15px;
-  border: 1px solid #ddd;
-  overflow: hidden;
 }
 
-.main_special_offers figure:not(.slick-current) {
-  margin-top: 100px;
+/* .main_special_offers figure:not(.slick-current) {
   filter: grayscale(1);
-}
+} */
 
 .main_special_offers figcaption {
   display: flex;
   flex-direction: column;
-  height: 0;
-}
-
-.main_special_offers figure.slick-current figcaption {
-  padding: 25px;
-  height: 200px;
+  padding: 32px 0;
+  height: 220px;
 }
 
 .main_special_offers figcaption strong {
-  margin: 0 0 15px 0;
   font-size: 20px;
   font-weight: 600;
   color: #437535;
+}
+
+.main_special_offers figcaption strong::after {
+  margin: 20px 0;
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #777;
 }
 
 .main_special_offers figcaption p {
@@ -548,16 +515,16 @@ body {
 
 .main_special_offers .arrows {
   position: absolute;
-  top: 53%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 1400px;
+  max-width: 1440px;
   width: 100%;
 }
 
 .main_special_offers .arrows i {
-  font-size: 30px;
-  color: #000;
+  font-size: 64px;
+  color: #bbb;
   padding: 20px;
   cursor: pointer;
 }
@@ -577,10 +544,6 @@ body {
 /* banner */
 .main_banner {
   background: linear-gradient(transparent 50%, #437535 50%);
-}
-
-.main_banner .btn {
-  background: #fff;
 }
 
 .main_banner .img_box {
@@ -707,15 +670,27 @@ body {
 
 .main_golf_course .img_box > * .txt span {
   margin: 0 0 8px 0;
+  display: block;
   font-size: 16px;
   font-weight: 100;
   text-align: center;
 }
 
 .main_golf_course .img_box > * .txt strong {
-  font-size: 20px;
+  margin: 0 0 32px 0;
+  display: block;
+  font-size: 24px;
   font-weight: 500;
   text-align: center;
+}
+
+.main_golf_course .img_box > * .txt .box_btn {
+  margin: 0 auto;
+  padding: 10px 25px;
+  font-size: 12px;
+  font-weight: 300;
+  border: 1px solid #fff;
+  align-self: flex-start;
 }
 
 .main_golf_course .img_box .itm_hb {
@@ -736,89 +711,25 @@ body {
   }
 }
 
-.main_join {
-}
-
-.main_join .join_tab .join_tab_link {
-  margin: 0 0 48px 0;
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-}
-
-.main_join .join_tab .join_tab_link li.on a {
-  color: #437535;
-  font-weight: 600;
-}
-
-.main_join .join_tab .join_tab_content .con {
-  visibility: hidden;
-  height: 0;
-}
-
-.main_join .join_tab .join_tab_content .con.on {
-  visibility: visible;
-  height: auto;
-}
-
-.main_join .join_tab .join_tab_content .con ul {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.main_join .join_tab .join_tab_content .con ul li {
-  padding: 30px;
-  border: 1px solid #ddd;
-}
-
-.main_join .join_tab .join_tab_content .con ul li:hover {
-  box-shadow: 0 0 10px rgba(181, 181, 181, 0.4);
-  transition: 0.5s;
-}
-
-.main_join .join_tab .join_tab_content .con ul li .wrap {
-  display: flex;
-  justify-content: space-between;
-  vertical-align: middle;
-}
-
-.main_join
-  .join_tab
-  .join_tab_content
-  .con
-  ul
-  li
-  .wrap
-  .cate[data-title="invitation"] {
-  color: #619019;
-}
-.main_join
-  .join_tab
-  .join_tab_content
-  .con
-  ul
-  li
-  .wrap
-  .cate[data-title="request"] {
-  color: #0770bb;
-}
-
-.main_join .join_tab .join_tab_content .con ul li .wrap .course {
-  width: 70px;
-  text-align: center;
-}
-
-.main_join .join_tab .join_tab_content .con ul li .wrap .title {
-  width: 400px;
-  font-weight: 500;
-}
-
-.main_join .join_tab .join_tab_content .con ul li .wrap .date span {
-  margin-right: 8px;
-}
-
 .main_notice {
+}
+
+.main_notice .content {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: 560px 1fr;
+}
+
+.main_notice .notice .notice_title {
+  margin: 0 0 16px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.main_notice .notice .notice_title strong {
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .main_notice .notice ul {
@@ -832,19 +743,58 @@ body {
 .main_notice .notice ul li .wrap {
   display: flex;
   justify-content: space-between;
-  padding: 30px 60px;
+  padding: 16px 8px;
 }
 
-.main_notice .notice ul li .wrap .title strong {
-  display: inline-block;
-  width: 750px;
-  font-weight: 500;
+.main_notice .notice ul li .wrap span {
+  font-size: 14px;
+  color: #777;
 }
 
 @media (max-width: 768px) {
   .main_notice {
     display: none;
   }
+}
+
+.main_notice .content .quick_menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.main_notice .content .quick_menu .qm_title strong {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.main_notice .content .quick_menu .qm_title_gr {
+  display: flex;
+  justify-content: right;
+  align-items: end;
+}
+
+.main_notice .content .quick_menu .qm_title_gr strong {
+  font-size: 24px;
+  font-weight: 300;
+  color: #bbbbbb;
+}
+
+.main_notice .content .quick_menu .quick_btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+.main_notice .content .quick_menu .quick_btn strong {
+  font-weight: 500;
+}
+
+.main_notice .content .quick_menu .quick_btn span {
+  font-size: 12px;
 }
 
 /* footer */
