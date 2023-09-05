@@ -1,4 +1,13 @@
 $(function () {
+  $(window).on("scroll", function () {
+    let sct = $(window).scrollTop();
+    if (sct > 0) {
+      $(".to_top").addClass("on");
+    } else {
+      $(".to_top").removeClass("on");
+    }
+  });
+
   $(".mobile_btn").on("click", function () {
     $(this).toggleClass("on");
     $(".gnb").toggleClass("on");
@@ -124,10 +133,5 @@ $(function () {
 
   $(".to_top").on("click", function () {
     $("html, body").animate({ scrollTop: 0 }, 600);
-  });
-
-  $(window).on("scroll", function () {
-    let sct = $(window).scrollTop();
-    sct > 1000 ? $(".to_top").addClass("on") : $(".to_top").removeClass("on");
   });
 });
